@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="sr-Latn">
+<head>
+<meta charset="utf-8">
+<title>Zahtevi za kontakt</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=Geist+Mono:wght@400;500&amp;display=swap">
+<style>
+body{margin:0;background:#F6F7F9;font-family:'Geist',ui-sans-serif,system-ui,sans-serif;color:#18181B;-webkit-font-smoothing:antialiased}
+a{color:#0369D1}a:hover{color:#02509F}
+.nav-a{display:flex;align-items:center;gap:12px;min-height:40px;padding:0 12px;border-radius:10px;color:#3F3F46;text-decoration:none;font-size:14px;font-weight:500;transition:background .25s cubic-bezier(.16,1,.3,1),color .25s}
+.nav-a:hover{background:#F0F1F4;color:#18181B}
+.btn{cursor:pointer;transition:transform .2s cubic-bezier(.16,1,.3,1),background .2s,border-color .2s}
+.btn:active{transform:translateY(1px) scale(.98)}
+.act{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 16px;border-radius:12px;text-decoration:none;font-size:14px;font-weight:600}
+.act-p{background:#0369D1;color:#FFFFFF}.act-p:hover{background:#0359B5;color:#FFFFFF}
+.act-s{background:#FFFFFF;color:#18181B;border:1px solid #DCDDE2}.act-s:hover{border-color:#0369D1;color:#0352A8}
+.rise{animation:rise .55s cubic-bezier(.16,1,.3,1) both}
+@keyframes rise{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.pulse{animation:pulse 2.2s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(.75)}}
+@media (prefers-reduced-motion: reduce){.rise,.pulse{animation:none}}
+</style>
+</helmet>
+<div style="min-height: 100vh; display: flex; flex-wrap: wrap; background: #F6F7F9">
+
+<aside style="flex: 1 1 240px; box-sizing: border-box; padding: 20px 14px; background: #FFFFFF; border-right: 1px solid #E7E8EC; display: flex; flex-direction: column; gap: 22px">
+  <div style="display: flex; align-items: center; gap: 10px; padding: 4px 10px">
+    <div style="width: 32px; height: 32px; border-radius: 10px; background: #0369D1; display: grid; place-items: center"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M4 12h16M12 4c2.3 2.2 3.4 4.9 3.4 8s-1.1 5.8-3.4 8c-2.3-2.2-3.4-4.9-3.4-8S9.7 6.2 12 4z"/></svg></div>
+    <div style="display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 700; font-size: 15px; letter-spacing: -0.01em">AIESEC Alumni</span><span style="font-size: 12px; color: #63636B">AIESEC in Serbia</span></div>
+  </div>
+  <button class="btn" type="button" style="display: flex; align-items: center; justify-content: space-between; gap: 8px; min-height: 48px; padding: 6px 12px; border: 1px solid #E4E4E7; border-radius: 12px; background: #FAFAFB; font: inherit; text-align: left; color: #18181B">
+    <span style="display: flex; flex-direction: column; gap: 1px"><span style="font-size: 11px; color: #63636B; letter-spacing: 0.04em; text-transform: uppercase">Opseg</span><span style="font-size: 14px; font-weight: 600">LC Novi Sad</span></span>
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#52525B" stroke-width="1.8" aria-hidden="true"><path d="m7 10 5 5 5-5"/></svg>
+  </button>
+  <nav aria-label="Glavni meni" style="display: flex; flex-direction: column; gap: 2px">
+    <a class="nav-a" href="Main.dc.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3.5 10.5 12 3.5l8.5 7V20a.5.5 0 0 1-.5.5h-5v-6h-6v6H4a.5.5 0 0 1-.5-.5z"/></svg>Pregled</a>
+    <a class="nav-a" href="Directory.dc.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.6 3.4-5.5 6.5-5.5s5.7 1.9 6.5 5.5M16 4.8a3.5 3.5 0 0 1 0 6.4M18 14.8c1.9.7 3.1 2.4 3.5 5.2"/></svg>Alumni baza</a>
+    <a class="nav-a" href="Approvals.dc.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 13h5l1.5 3h5L16 13h5"/><path d="M5.5 5h13L21 13v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-6z"/></svg><span style="flex: 1">Prijave</span><span style="font-family: 'Geist Mono', monospace; font-size: 12px; padding: 2px 8px; border-radius: 999px; background: #FEF3C7; color: #92400E">4</span></a>
+    <a class="nav-a" href="Contacts.dc.html" aria-current="page" style="background: #EAF2FD; color: #0352A8"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1z"/></svg><span style="flex: 1">Zahtevi za kontakt</span><span style="font-family: 'Geist Mono', monospace; font-size: 12px; padding: 2px 8px; border-radius: 999px; background: #E0EDFC; color: #0352A8">{{inCount}}</span></a>
+    <span style="font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #6B6B73; padding: 16px 12px 6px">Komunikacija</span>
+    <a class="nav-a" href="Newsletter.dc.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 6.5 8.5-6.5"/></svg>Newsletteri</a>
+    <a class="nav-a" href="Groups.dc.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m12 3.5 8.5 4.5-8.5 4.5L3.5 8z"/><path d="m3.5 12.5 8.5 4.5 8.5-4.5M3.5 16.5 12 21l8.5-4.5"/></svg>Grupe</a>
+    <span style="font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #6B6B73; padding: 16px 12px 6px">Administracija</span>
+    <a class="nav-a" href="Roles.dc.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 3 4.5 6v5.5c0 4.6 3.2 8.4 7.5 9.5 4.3-1.1 7.5-4.9 7.5-9.5V6z"/><path d="m9 12 2 2 4-4"/></svg>Uloge i uslovi</a>
+  </nav>
+  <div style="margin-top: auto; display: flex; align-items: center; gap: 10px; padding: 12px 10px; border-top: 1px solid #EEEFF2">
+    <div style="width: 36px; height: 36px; border-radius: 50%; background: #0F3D2E; color: #FFFFFF; display: grid; place-items: center; font-size: 13px; font-weight: 600">SJ</div>
+    <div style="display: flex; flex-direction: column; gap: 1px; min-width: 0"><span style="font-size: 14px; font-weight: 600">Stefan Jovanović</span><span style="font-size: 12px; color: #63636B">LCP Novi Sad · lokalni admin</span></div>
+  </div>
+</aside>
+
+<main style="flex: 999 1 560px; min-width: 0; box-sizing: border-box; padding: 32px clamp(16px, 3vw, 48px) 64px">
+<div style="max-width: 1180px; display: flex; flex-direction: column; gap: 24px">
+
+  <header style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 16px">
+    <div style="display: flex; flex-direction: column; gap: 6px; max-width: 64ch">
+      <span style="font-size: 13px; color: #63636B">LC Novi Sad</span>
+      <h1 style="margin: 0; font-size: 32px; line-height: 1.1; letter-spacing: -0.03em; font-weight: 600">Zahtevi za kontakt</h1>
+    </div>
+    <div role="tablist" aria-label="Vrsta zahteva" style="display: flex; gap: 4px; padding: 4px; border-radius: 14px; background: #ECEDF0">
+      <button class="btn" type="button" role="tab" aria-selected="{{inSel}}" onClick="{{toIn}}" style="{{inStyle}}">Za moje alumnije <span style="font-family: 'Geist Mono', monospace; font-size: 12px; color: #63636B">{{inCount}}</span></button>
+      <button class="btn" type="button" role="tab" aria-selected="{{outSel}}" onClick="{{toOut}}" style="{{outStyle}}">Moji zahtevi <span style="font-family: 'Geist Mono', monospace; font-size: 12px; color: #63636B">3</span></button>
+    </div>
+  </header>
+
+  <ol aria-label="Kako radi" style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)); gap: 1px; border-radius: 16px; overflow: hidden; background: #E4E4E7; border: 1px solid #E4E4E7">
+    <li style="background: #FFFFFF; padding: 16px 18px; display: flex; gap: 12px; align-items: flex-start"><span style="font-family: 'Geist Mono', monospace; font-size: 13px; color: #0369D1">01</span><span style="font-size: 14px; line-height: 1.5; color: #3F3F46">Drugi LC ili MC traži kontakt alumnija i navodi zašto</span></li>
+    <li style="background: #FFFFFF; padding: 16px 18px; display: flex; gap: 12px; align-items: flex-start"><span style="font-family: 'Geist Mono', monospace; font-size: 13px; color: #0369D1">02</span><span style="font-size: 14px; line-height: 1.5; color: #3F3F46">LCP alumnijevog LC-a odobrava ili odbija zahtev</span></li>
+    <li style="background: #FFFFFF; padding: 16px 18px; display: flex; gap: 12px; align-items: flex-start"><span style="font-family: 'Geist Mono', monospace; font-size: 13px; color: #0369D1">03</span><span style="font-size: 14px; line-height: 1.5; color: #3F3F46">Podnosilac šalje email ili zove direktno iz aplikacije, 30 dana</span></li>
+  </ol>
+
+  <sc-if value="{{isIn}}" hint-placeholder-val="{{true}}">
+  <section aria-label="Zahtevi za alumnije LC Novi Sad" style="display: flex; flex-direction: column; gap: 14px">
+    <sc-for list="{{incoming}}" as="r" hint-placeholder-count="2">
+      <article class="rise" style="animation-delay: {{r.delay}}; border-radius: 20px; background: #FFFFFF; border: 1px solid #EBECEF; display: flex; flex-direction: column">
+        <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 14px; padding: 20px 24px; border-bottom: 1px solid #F1F2F4">
+          <span style="width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; font-size: 13px; font-weight: 600; background: {{r.fromTint}}; color: {{r.fromInk}}">{{r.fromIni}}</span>
+          <span style="flex: 1 1 260px; display: flex; flex-direction: column; gap: 2px">
+            <span style="font-size: 15px"><strong style="font-weight: 600">{{r.from}}</strong> <span style="color: #52525B">({{r.fromRole}})</span> traži kontakt</span>
+            <span style="font-size: 13px; color: #63636B">{{r.when}}</span>
+          </span>
+          <span style="display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 500; padding: 6px 12px; border-radius: 999px; background: {{r.sBg}}; color: {{r.sInk}}"><span class="pulse" style="width: 7px; height: 7px; border-radius: 50%; background: {{r.sInk}}"></span>{{r.status}}</span>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)); gap: 18px 28px; padding: 20px 24px">
+          <div style="display: flex; flex-direction: column; gap: 6px"><span style="font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #63636B">Alumni</span><a href="Profile.dc.html" style="font-size: 15px; font-weight: 600; text-decoration: none">{{r.alum}}</a><span style="font-size: 13px; color: #52525B">{{r.alumMeta}}</span></div>
+          <div style="display: flex; flex-direction: column; gap: 6px"><span style="font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #63636B">Svrha</span><span style="font-size: 14px; line-height: 1.5">{{r.reason}}</span></div>
+          <div style="display: flex; flex-direction: column; gap: 6px"><span style="font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #63636B">Traži</span><span style="font-size: 14px">{{r.channel}}</span></div>
+        </div>
+        <sc-if value="{{r.pending}}" hint-placeholder-val="{{true}}">
+        <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 24px 20px; border-top: 1px solid #F1F2F4">
+          <span style="font-size: 13px; color: #63636B; max-width: 52ch">Alumni dobija obaveštenje ko je dobio njegov kontakt i zašto.</span>
+          <div style="display: flex; gap: 10px">
+            <button class="btn" type="button" onClick="{{r.decline}}" style="min-height: 44px; padding: 0 16px; border-radius: 12px; border: 1px solid #F3C4C4; background: #FFFFFF; font: inherit; font-size: 14px; font-weight: 500; color: #B91C1C">Odbij</button>
+            <button class="btn" type="button" onClick="{{r.approve}}" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 18px; border-radius: 12px; border: 0; background: #0369D1; font: inherit; font-size: 14px; font-weight: 600; color: #FFFFFF"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Odobri kontakt</button>
+          </div>
+        </div>
+        </sc-if>
+      </article>
+    </sc-for>
+  </section>
+  </sc-if>
+
+  <sc-if value="{{isOut}}" hint-placeholder-val="{{false}}">
+  <section aria-label="Moji zahtevi" style="display: flex; flex-direction: column; gap: 14px">
+
+    <article class="rise" style="border-radius: 20px; background: #FFFFFF; border: 1px solid #BBE3C8; box-shadow: 0 24px 48px -32px rgba(22,101,52,0.25); display: flex; flex-direction: column">
+      <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 14px; padding: 20px 24px; border-bottom: 1px solid #F1F2F4">
+        <span style="width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; font-size: 14px; font-weight: 600; background: #FCE7F3; color: #9D174D">MS</span>
+        <span style="flex: 1 1 240px; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 16px; font-weight: 600">Mina Stojanović</span><span style="font-size: 13px; color: #52525B">LC Niš · Engineering Manager, HTEC Group</span></span>
+        <span style="font-size: 13px; font-weight: 500; padding: 6px 12px; border-radius: 999px; background: #DCFCE7; color: #166534">Odobreno · važi još 27 dana</span>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px 24px; padding: 18px 24px 22px">
+        <div style="flex: 1 1 280px; display: flex; flex-direction: column; gap: 4px">
+          <span style="font-size: 13px; color: #63636B">Odobrila Tamara Nikolić, LCP Niš · svrha: trener na LC Novi Sad Leadership Summit-u</span>
+          <span style="font-size: 15px"><span style="font-family: 'Geist Mono', monospace">mina.stojanovic@gmail.com</span> · <span style="font-family: 'Geist Mono', monospace">+381 64 218 3907</span></span>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 10px">
+          <a class="act act-s btn" href="tel:+381642183907"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1z"/></svg>Pozovi</a>
+          <a class="act act-p btn" href="mailto:mina.stojanovic@gmail.com?subject=Poziv%20za%20trenera%20%E2%80%94%20LC%20Novi%20Sad"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 6.5 8.5-6.5"/></svg>Pošalji email</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="rise" style="animation-delay: 80ms; border-radius: 20px; background: #FFFFFF; border: 1px solid #EBECEF; display: flex; flex-wrap: wrap; align-items: center; gap: 14px; padding: 20px 24px">
+      <span style="width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; font-size: 14px; font-weight: 600; background: #E3F4E8; color: #166534">LM</span>
+      <span style="flex: 1 1 240px; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 16px; font-weight: 600">Lazar Mitrović</span><span style="font-size: 13px; color: #52525B">LC Metropolitan · čeka LCP-a LC MET · poslato juče</span></span>
+      <span style="display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 500; padding: 6px 12px; border-radius: 999px; background: #FEF3C7; color: #92400E"><span class="pulse" style="width: 7px; height: 7px; border-radius: 50%; background: #92400E"></span>Na čekanju</span>
+      <button class="btn" type="button" style="min-height: 44px; padding: 0 14px; border-radius: 12px; border: 1px solid #DCDDE2; background: #FFFFFF; font: inherit; font-size: 14px; font-weight: 500; color: #18181B">Povuci zahtev</button>
+    </article>
+
+    <article class="rise" style="animation-delay: 160ms; border-radius: 20px; background: #FFFFFF; border: 1px solid #EBECEF; display: flex; flex-wrap: wrap; align-items: center; gap: 14px; padding: 20px 24px">
+      <span style="width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; font-size: 14px; font-weight: 600; background: #FDE8D7; color: #9A3412">KL</span>
+      <span style="flex: 1 1 240px; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 16px; font-weight: 600">Katarina Lukić</span><span style="font-size: 13px; color: #52525B">LC FON · „Alumni je zamolila da je ne kontaktiramo do januara.”</span></span>
+      <span style="font-size: 13px; font-weight: 500; padding: 6px 12px; border-radius: 999px; background: #FEE2E2; color: #B91C1C">Odbijeno</span>
+    </article>
+  </section>
+  </sc-if>
+
+</div>
+</main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1240}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { tab: 'in', st: { a: 'pending', b: 'pending' } }; }
+  renderVals() {
+    var self = this;
+    var st = this.state.st;
+    var look = {
+      pending: ['Čeka tvoju odluku', '#FEF3C7', '#92400E'],
+      approved: ['Odobreno · kontakt podeljen na 30 dana', '#DCFCE7', '#166534'],
+      declined: ['Odbijeno · podnosilac je obavešten', '#FEE2E2', '#B91C1C']
+    };
+    function set(id, v) { var n = Object.assign({}, st); n[id] = v; self.setState({ st: n }); }
+    var incoming = [
+      { id: 'a', from: 'Đorđe Lazić', fromRole: 'LCP, LC FON', fromIni: 'ĐL', fromTint: '#EDE9FE', fromInk: '#5B21B6', when: 'Pre 3 sata',
+        alum: 'Teodora Vasić', alumMeta: 'LCVP oGX 2018–2020 · Senior PM, Nordeus',
+        reason: 'Predavač na panelu o karijeri u IT-u, FON Leadership Days, 6. decembar.', channel: 'Email i telefon' },
+      { id: 'b', from: 'Milica Ranković', fromRole: 'MCP', fromIni: 'MR', fromTint: '#18181B', fromInk: '#FFFFFF', when: 'Juče, 18:20',
+        alum: 'Vuk Marković', alumMeta: 'LCP 2015–2016 · osnivač, Frame Studio',
+        reason: 'Govornik na panelu o preduzetništvu, nacionalna konferencija u martu.', channel: 'Telefon' }
+    ].map(function (r, i) {
+      var s = st[r.id];
+      r.status = look[s][0]; r.sBg = look[s][1]; r.sInk = look[s][2];
+      r.pending = s === 'pending'; r.delay = (i * 80) + 'ms';
+      r.approve = function () { set(r.id, 'approved'); };
+      r.decline = function () { set(r.id, 'declined'); };
+      return r;
+    });
+    var inCount = Object.keys(st).filter(function (k) { return st[k] === 'pending'; }).length;
+    var tab = function (on) { return 'min-height: 40px; padding: 0 14px; border-radius: 10px; border: 0; font: inherit; font-size: 14px; font-weight: 500; display: inline-flex; align-items: center; gap: 8px; color: #18181B; background: ' + (on ? '#FFFFFF' : 'transparent') + '; box-shadow: ' + (on ? '0 1px 2px rgba(24,24,27,0.08)' : 'none'); };
+    var isIn = this.state.tab === 'in';
+    return {
+      incoming: incoming, inCount: inCount, isIn: isIn, isOut: !isIn,
+      inSel: isIn ? 'true' : 'false', outSel: isIn ? 'false' : 'true',
+      inStyle: tab(isIn), outStyle: tab(!isIn),
+      toIn: function () { self.setState({ tab: 'in' }); },
+      toOut: function () { self.setState({ tab: 'out' }); }
+    };
+  }
+}
+</script>
+</body>
+</html>

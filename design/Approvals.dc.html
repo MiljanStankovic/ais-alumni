@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="sr-Latn">
+<head>
+<meta charset="utf-8">
+<title>Odobravanje prijava</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=Geist+Mono:wght@400;500&amp;display=swap">
+<style>
+body{margin:0;background:#F6F7F9;font-family:'Geist',ui-sans-serif,system-ui,sans-serif;color:#18181B;-webkit-font-smoothing:antialiased}
+a{color:#0369D1}a:hover{color:#02509F}
+.nav-a{display:flex;align-items:center;gap:12px;min-height:40px;padding:0 12px;border-radius:10px;color:#3F3F46;text-decoration:none;font-size:14px;font-weight:500;transition:background .25s cubic-bezier(.16,1,.3,1),color .25s}
+.nav-a:hover{background:#F0F1F4;color:#18181B}
+.btn{cursor:pointer;transition:transform .2s cubic-bezier(.16,1,.3,1),background .2s,border-color .2s}
+.btn:active{transform:translateY(1px) scale(.98)}
+.item{transition:background .2s,border-color .2s}.item:hover{background:#F8F9FB}
+.swap{animation:swap .45s cubic-bezier(.16,1,.3,1) both}
+@keyframes swap{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.toast{animation:toast .6s cubic-bezier(.34,1.56,.64,1) both}
+@keyframes toast{from{opacity:0;transform:translateY(16px) scale(.96)}to{opacity:1;transform:none}}
+.fld{box-sizing:border-box;width:100%;padding:12px 14px;border-radius:12px;border:1px solid #D4D4D8;background:#FFFFFF;font:inherit;font-size:14px;color:#18181B;resize:vertical}
+.fld:focus{outline:none;border-color:#0369D1;box-shadow:0 0 0 4px rgba(3,105,209,0.14)}
+@media (prefers-reduced-motion: reduce){.swap,.toast{animation:none}}
+</style>
+</helmet>
+<div style="min-height: 100vh; display: flex; flex-wrap: wrap; background: #F6F7F9">
+
+<aside style="flex: 1 1 240px; box-sizing: border-box; padding: 20px 14px; background: #FFFFFF; border-right: 1px solid #E7E8EC; display: flex; flex-direction: column; gap: 22px">
+  <div style="display: flex; align-items: center; gap: 10px; padding: 4px 10px">
+    <div style="width: 32px; height: 32px; border-radius: 10px; background: #0369D1; display: grid; place-items: center"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M4 12h16M12 4c2.3 2.2 3.4 4.9 3.4 8s-1.1 5.8-3.4 8c-2.3-2.2-3.4-4.9-3.4-8S9.7 6.2 12 4z"/></svg></div>
+    <div style="display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 700; font-size: 15px; letter-spacing: -0.01em">AIESEC Alumni</span><span style="font-size: 12px; color: #63636B">AIESEC in Serbia</span></div>
+  </div>
+  <button class="btn" type="button" style="display: flex; align-items: center; justify-content: space-between; gap: 8px; min-height: 48px; padding: 6px 12px; border: 1px solid #E4E4E7; border-radius: 12px; background: #FAFAFB; font: inherit; text-align: left; color: #18181B">
+    <span style="display: flex; flex-direction: column; gap: 1px"><span style="font-size: 11px; color: #63636B; letter-spacing: 0.04em; text-transform: uppercase">Opseg</span><span style="font-size: 14px; font-weight: 600">LC Novi Sad</span></span>
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#52525B" stroke-width="1.8" aria-hidden="true"><path d="m7 10 5 5 5-5"/></svg>
+  </button>
+  <nav aria-label="Glavni meni" style="display: flex; flex-direction: column; gap: 2px">
+    <a class="nav-a" href="Main.dc.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3.5 10.5 12 3.5l8.5 7V20a.5.5 0 0 1-.5.5h-5v-6h-6v6H4a.5.5 0 0 1-.5-.5z"/></svg>Pregled</a>
+    <a class="nav-a" href="Directory.dc.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.6 3.4-5.5 6.5-5.5s5.7 1.9 6.5 5.5M16 4.8a3.5 3.5 0 0 1 0 6.4M18 14.8c1.9.7 3.1 2.4 3.5 5.2"/></svg>Alumni baza</a>
+    <a class="nav-a" href="Approvals.dc.html" aria-current="page" style="background: #EAF2FD; color: #0352A8"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 13h5l1.5 3h5L16 13h5"/><path d="M5.5 5h13L21 13v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-6z"/></svg><span style="flex: 1">Prijave</span><span style="font-family: 'Geist Mono', monospace; font-size: 12px; padding: 2px 8px; border-radius: 999px; background: #FEF3C7; color: #92400E">{{pendingCount}}</span></a>
+    <a class="nav-a" href="Contacts.dc.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1z"/></svg><span style="flex: 1">Zahtevi za kontakt</span><span style="font-family: 'Geist Mono', monospace; font-size: 12px; padding: 2px 8px; border-radius: 999px; background: #E0EDFC; color: #0352A8">2</span></a>
+    <span style="font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #6B6B73; padding: 16px 12px 6px">Komunikacija</span>
+    <a class="nav-a" href="Newsletter.dc.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 6.5 8.5-6.5"/></svg>Newsletteri</a>
+    <a class="nav-a" href="Groups.dc.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m12 3.5 8.5 4.5-8.5 4.5L3.5 8z"/><path d="m3.5 12.5 8.5 4.5 8.5-4.5M3.5 16.5 12 21l8.5-4.5"/></svg>Grupe</a>
+    <span style="font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #6B6B73; padding: 16px 12px 6px">Administracija</span>
+    <a class="nav-a" href="Roles.dc.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 3 4.5 6v5.5c0 4.6 3.2 8.4 7.5 9.5 4.3-1.1 7.5-4.9 7.5-9.5V6z"/><path d="m9 12 2 2 4-4"/></svg>Uloge i uslovi</a>
+  </nav>
+  <div style="margin-top: auto; display: flex; align-items: center; gap: 10px; padding: 12px 10px; border-top: 1px solid #EEEFF2">
+    <div style="width: 36px; height: 36px; border-radius: 50%; background: #0F3D2E; color: #FFFFFF; display: grid; place-items: center; font-size: 13px; font-weight: 600">SJ</div>
+    <div style="display: flex; flex-direction: column; gap: 1px; min-width: 0"><span style="font-size: 14px; font-weight: 600">Stefan Jovanović</span><span style="font-size: 12px; color: #63636B">LCP Novi Sad · lokalni admin</span></div>
+  </div>
+</aside>
+
+<main style="flex: 999 1 560px; min-width: 0; box-sizing: border-box; padding: 32px clamp(16px, 3vw, 48px) 64px; position: relative">
+<div style="max-width: 1180px; display: flex; flex-direction: column; gap: 24px">
+
+  <header style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 16px">
+    <div style="display: flex; flex-direction: column; gap: 6px">
+      <span style="font-size: 13px; color: #63636B">LC Novi Sad · vidiš samo prijave svog LC-a</span>
+      <h1 style="margin: 0; font-size: 32px; line-height: 1.1; letter-spacing: -0.03em; font-weight: 600">Prijave za alumni status</h1>
+    </div>
+    <div role="tablist" aria-label="Status prijava" style="display: flex; gap: 4px; padding: 4px; border-radius: 14px; background: #ECEDF0">
+      <sc-for list="{{tabs}}" as="t" hint-placeholder-count="3">
+        <button class="btn" type="button" role="tab" aria-selected="{{t.sel}}" onClick="{{t.pick}}" style="{{t.style}}">{{t.label}} <span style="font-family: 'Geist Mono', monospace; font-size: 12px; color: #63636B">{{t.count}}</span></button>
+      </sc-for>
+    </div>
+  </header>
+
+  <div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start">
+
+    <section aria-label="Lista prijava" style="flex: 1 1 320px; min-width: 0; border-radius: 20px; background: #FFFFFF; border: 1px solid #EBECEF; overflow: hidden">
+      <sc-if value="{{empty}}" hint-placeholder-val="{{false}}">
+        <div style="padding: 48px 28px; display: flex; flex-direction: column; align-items: center; gap: 12px; text-align: center">
+          <svg width="56" height="56" viewBox="0 0 56 56" fill="none" aria-hidden="true"><rect x="8" y="14" width="40" height="30" rx="6" stroke="#C4C4CC" stroke-width="1.5"/><path d="M8 30h11l3 5h12l3-5h11" stroke="#C4C4CC" stroke-width="1.5"/></svg>
+          <span style="font-size: 15px; font-weight: 600">Ovde nema prijava</span>
+          <span style="font-size: 14px; color: #63636B; max-width: 32ch">Kada neko izabere LC Novi Sad u javnoj prijavi, pojaviće se ovde.</span>
+          <a href="Apply.dc.html" style="font-size: 14px; font-weight: 500; min-height: 44px; display: inline-flex; align-items: center">Pogledaj javnu prijavu</a>
+        </div>
+      </sc-if>
+      <sc-for list="{{visible}}" as="a" hint-placeholder-count="4">
+        <button class="item btn" type="button" onClick="{{a.pick}}" style="width: 100%; display: flex; align-items: center; gap: 12px; padding: 16px 20px; border: 0; border-bottom: 1px solid #F1F2F4; border-left: 3px solid {{a.edge}}; background: {{a.bg}}; font: inherit; text-align: left; color: #18181B">
+          <span style="flex: none; width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; font-size: 13px; font-weight: 600; background: {{a.tint}}; color: {{a.ink}}">{{a.ini}}</span>
+          <span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px; font-weight: 600">{{a.name}}</span><span style="font-size: 13px; color: #63636B">{{a.headline}}</span></span>
+          <span style="display: flex; flex-direction: column; align-items: flex-end; gap: 4px"><span style="font-size: 12px; color: #63636B">{{a.when}}</span><span style="font-family: 'Geist Mono', monospace; font-size: 12px; padding: 2px 8px; border-radius: 999px; background: {{a.scoreBg}}; color: {{a.scoreInk}}">{{a.score}}</span></span>
+        </button>
+      </sc-for>
+    </section>
+
+    <sc-if value="{{hasSel}}" hint-placeholder-val="{{true}}">
+    <section class="swap" aria-labelledby="det-h" style="flex: 2 1 520px; min-width: 0; border-radius: 20px; background: #FFFFFF; border: 1px solid #EBECEF; box-shadow: 0 24px 48px -32px rgba(24,24,27,0.18); display: flex; flex-direction: column">
+      <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 16px; padding: 24px 28px; border-bottom: 1px solid #EEEFF2">
+        <span style="width: 56px; height: 56px; border-radius: 50%; display: grid; place-items: center; font-size: 18px; font-weight: 600; background: {{sel.tint}}; color: {{sel.ink}}">{{sel.ini}}</span>
+        <div style="flex: 1 1 220px; display: flex; flex-direction: column; gap: 4px">
+          <h2 id="det-h" style="margin: 0; font-size: 22px; letter-spacing: -0.02em; font-weight: 600">{{sel.name}}</h2>
+          <span style="font-size: 14px; color: #52525B">{{sel.email}} · prijava poslata {{sel.when}}</span>
+        </div>
+        <span style="font-size: 13px; font-weight: 500; padding: 6px 12px; border-radius: 999px; background: {{sel.statusBg}}; color: {{sel.statusInk}}">{{sel.statusLabel}}</span>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr)); gap: 0">
+        <div style="padding: 24px 28px; display: flex; flex-direction: column; gap: 14px; border-right: 1px solid #F1F2F4">
+          <h3 style="margin: 0; font-size: 13px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #52525B">Deklarisano iskustvo</h3>
+          <sc-for list="{{sel.positions}}" as="p" hint-placeholder-count="3">
+            <div style="display: flex; gap: 12px; align-items: baseline"><span style="font-family: 'Geist Mono', monospace; font-size: 12px; color: #63636B; min-width: 82px">{{p.term}}</span><span style="font-size: 14px; font-weight: 500">{{p.role}}</span></div>
+          </sc-for>
+          <div style="height: 1px; background: #F1F2F4"></div>
+          <div style="display: flex; gap: 12px; align-items: baseline"><span style="font-size: 12px; color: #63636B; min-width: 82px">Trenutno</span><span style="font-size: 14px; font-weight: 500">{{sel.job}}</span></div>
+        </div>
+        <div style="padding: 24px 28px; display: flex; flex-direction: column; gap: 14px">
+          <h3 style="margin: 0; font-size: 13px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #52525B">Uslovi LC Novi Sad</h3>
+          <sc-for list="{{sel.criteria}}" as="c" hint-placeholder-count="4">
+            <div style="display: flex; gap: 12px; align-items: flex-start">
+              <span style="flex: none; width: 22px; height: 22px; border-radius: 50%; display: grid; place-items: center; background: {{c.bg}}">
+                <sc-if value="{{c.ok}}" hint-placeholder-val="{{true}}"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#166534" stroke-width="3" aria-label="Ispunjeno" role="img"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></sc-if>
+                <sc-if value="{{c.bad}}" hint-placeholder-val="{{false}}"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#92400E" stroke-width="3" aria-label="Nije ispunjeno" role="img"><path d="M12 7v6M12 17h.01"/></svg></sc-if>
+              </span>
+              <span style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 14px; font-weight: 500">{{c.label}}</span><span style="font-size: 13px; color: #63636B">{{c.detail}}</span></span>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+
+      <div style="padding: 20px 28px; border-top: 1px solid #EEEFF2; display: flex; flex-direction: column; gap: 8px">
+        <label for="note" style="font-size: 14px; font-weight: 500">Poruka podnosiocu <span style="color: #63636B; font-weight: 400">(šalje se uz odluku)</span></label>
+        <textarea id="note" class="fld" rows="2" placeholder="Npr. Dobro došla nazad! Vidimo se na Homecoming-u."></textarea>
+      </div>
+
+      <div style="padding: 18px 28px 24px; display: flex; flex-wrap: wrap; gap: 10px; justify-content: flex-end">
+        <button class="btn" type="button" onClick="{{reject}}" style="min-height: 46px; padding: 0 18px; border-radius: 12px; border: 1px solid #F3C4C4; background: #FFFFFF; font: inherit; font-size: 14px; font-weight: 500; color: #B91C1C">Odbij</button>
+        <button class="btn" type="button" onClick="{{askInfo}}" style="min-height: 46px; padding: 0 18px; border-radius: 12px; border: 1px solid #DCDDE2; background: #FFFFFF; font: inherit; font-size: 14px; font-weight: 500; color: #18181B">Traži dopunu</button>
+        <button class="btn" type="button" onClick="{{approve}}" style="display: inline-flex; align-items: center; gap: 8px; min-height: 46px; padding: 0 20px; border-radius: 12px; border: 0; background: #0369D1; font: inherit; font-size: 14px; font-weight: 600; color: #FFFFFF; box-shadow: inset 0 1px 0 rgba(255,255,255,0.18), 0 8px 20px -10px rgba(3,105,209,0.6)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Odobri alumni status</button>
+      </div>
+    </section>
+    </sc-if>
+  </div>
+
+  <sc-if value="{{hasToast}}" hint-placeholder-val="{{false}}">
+    <div class="toast" role="status" style="align-self: flex-end; display: flex; align-items: center; gap: 12px; padding: 14px 18px; border-radius: 14px; background: #18181B; color: #FAFAFA; font-size: 14px; box-shadow: 0 20px 40px -16px rgba(24,24,27,0.4)">
+      <span style="width: 8px; height: 8px; border-radius: 50%; background: {{toastDot}}"></span>{{toast}}
+    </div>
+  </sc-if>
+
+</div>
+</main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1160}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { tab: 'pending', sel: 'tv', status: { tv: 'pending', nk: 'pending', at: 'pending', vm: 'pending', sp: 'approved', oi: 'rejected' }, toast: null, toastDot: '#22C55E' };
+  }
+  renderVals() {
+    var self = this;
+    var st = this.state.status;
+    var people = [
+      { id: 'tv', name: 'Teodora Vasić', ini: 'TV', tint: '#DCEBFB', ink: '#0352A8', email: 'teodora.vasic@gmail.com', when: 'danas, 11:42', headline: 'LCVP oGX, 2018–2020',
+        job: 'Senior Product Manager · Nordeus',
+        positions: [{ term: '2016–2017', role: 'Član, oGV tim' }, { term: '2017–2018', role: 'Team Leader, oGV' }, { term: '2018–2020', role: 'LCVP Outgoing Exchange' }],
+        criteria: [{ label: 'Članstvo 12+ meseci', detail: 'Deklarisano: 3 godine i 9 meseci', ok: true }, { label: 'Završena uloga vođstva', detail: 'Team Leader, LCVP', ok: true }, { label: 'Pronađena u evidenciji LC-a', detail: 'Lista članova 2016–2020, poklapanje po emailu', ok: true }, { label: 'Nije već u bazi', detail: 'Nema duplikata po emailu i imenu', ok: true }] },
+      { id: 'nk', name: 'Nemanja Kostić', ini: 'NK', tint: '#E3F4E8', ink: '#166534', email: 'nemanja.kostic@outlook.com', when: 'pre 5 dana', headline: 'Član TM, 2022–2023',
+        job: 'HR Generalist · Delhaize Serbia',
+        positions: [{ term: '2022–2023', role: 'Član, Talent Management' }],
+        criteria: [{ label: 'Članstvo 12+ meseci', detail: 'Deklarisano: 10 meseci', ok: false }, { label: 'Završena uloga vođstva', detail: 'Nema deklarisane uloge', ok: false }, { label: 'Pronađen u evidenciji LC-a', detail: 'Lista članova 2022/23', ok: true }, { label: 'Nije već u bazi', detail: 'Nema duplikata', ok: true }] },
+      { id: 'at', name: 'Anđela Tomić', ini: 'AT', tint: '#FDE8D7', ink: '#9A3412', email: 'andjela.tomic@gmail.com', when: 'pre 2 dana', headline: 'OC President, 2021',
+        job: 'Konsultantkinja · Deloitte Srbija',
+        positions: [{ term: '2019–2020', role: 'Član, Marketing' }, { term: '2021', role: 'OC President, Youth Speak Forum' }],
+        criteria: [{ label: 'Članstvo 12+ meseci', detail: 'Deklarisano: 2 godine', ok: true }, { label: 'Završena uloga vođstva', detail: 'Predsednica organizacionog komiteta', ok: true }, { label: 'Pronađena u evidenciji LC-a', detail: 'Nije pronađena — proveri ručno', ok: false }, { label: 'Nije već u bazi', detail: 'Nema duplikata', ok: true }] },
+      { id: 'vm', name: 'Vuk Marković', ini: 'VM', tint: '#F1E6FA', ink: '#6B21A8', email: 'vuk.markovic@proton.me', when: 'pre 4 dana', headline: 'LCP, 2015–2016',
+        job: 'Osnivač · Frame Studio',
+        positions: [{ term: '2013–2014', role: 'Team Leader, iGV' }, { term: '2014–2015', role: 'LCVP Finance' }, { term: '2015–2016', role: 'LCP LC Novi Sad' }],
+        criteria: [{ label: 'Članstvo 12+ meseci', detail: 'Deklarisano: 3 godine', ok: true }, { label: 'Završena uloga vođstva', detail: 'LCP', ok: true }, { label: 'Pronađen u evidenciji LC-a', detail: 'Arhiva LCP-ova', ok: true }, { label: 'Nije već u bazi', detail: 'Nema duplikata', ok: true }] },
+      { id: 'sp', name: 'Sara Petković', ini: 'SP', tint: '#E0F2F1', ink: '#115E59', email: 'sara.petkovic@gmail.com', when: '12. okt', headline: 'LCVP B2B, 2020–2021',
+        job: 'Key Account Manager · Raiffeisen banka',
+        positions: [{ term: '2019–2020', role: 'Team Leader, B2B' }, { term: '2020–2021', role: 'LCVP Business Development' }],
+        criteria: [{ label: 'Članstvo 12+ meseci', detail: '2 godine', ok: true }, { label: 'Završena uloga vođstva', detail: 'LCVP', ok: true }, { label: 'Pronađena u evidenciji LC-a', detail: 'Da', ok: true }, { label: 'Nije već u bazi', detail: 'Nema duplikata', ok: true }] },
+      { id: 'oi', name: 'Ognjen Ilić', ini: 'OI', tint: '#F4F4F5', ink: '#3F3F46', email: 'ognjen.ilic@gmail.com', when: '3. okt', headline: 'Član, 2024',
+        job: 'Student',
+        positions: [{ term: '2024', role: 'Član, oGV tim (4 meseca)' }],
+        criteria: [{ label: 'Članstvo 12+ meseci', detail: '4 meseca', ok: false }, { label: 'Završena uloga vođstva', detail: 'Nema', ok: false }, { label: 'Pronađen u evidenciji LC-a', detail: 'Da', ok: true }, { label: 'Nije već u bazi', detail: 'Nema duplikata', ok: true }] }
+    ];
+    var labels = { pending: 'Na čekanju', approved: 'Odobreno', rejected: 'Odbijeno', info: 'Traži dopunu' };
+    var colors = { pending: ['#FEF3C7', '#92400E'], approved: ['#DCFCE7', '#166534'], rejected: ['#FEE2E2', '#B91C1C'], info: ['#E0EDFC', '#0352A8'] };
+    function inTab(p, tab) { var s = st[p.id]; return tab === 'pending' ? (s === 'pending' || s === 'info') : s === tab; }
+    var visible = people.filter(function (p) { return inTab(p, self.state.tab); }).map(function (p) {
+      var okN = p.criteria.filter(function (c) { return c.ok; }).length;
+      var full = okN === p.criteria.length;
+      var on = p.id === self.state.sel;
+      return {
+        name: p.name, ini: p.ini, tint: p.tint, ink: p.ink, headline: p.headline, when: p.when,
+        score: okN + '/' + p.criteria.length, scoreBg: full ? '#DCFCE7' : '#FEF3C7', scoreInk: full ? '#166534' : '#92400E',
+        bg: on ? '#F3F8FE' : '#FFFFFF', edge: on ? '#0369D1' : 'transparent',
+        pick: function () { self.setState({ sel: p.id }); }
+      };
+    });
+    var tabs = ['pending', 'approved', 'rejected'].map(function (k) {
+      var on = self.state.tab === k;
+      var n = people.filter(function (p) { return inTab(p, k); }).length;
+      return {
+        label: labels[k], count: n, sel: on ? 'true' : 'false',
+        style: 'min-height: 40px; padding: 0 14px; border-radius: 10px; border: 0; font: inherit; font-size: 14px; font-weight: 500; display: inline-flex; align-items: center; gap: 8px; color: #18181B; background: ' + (on ? '#FFFFFF' : 'transparent') + '; box-shadow: ' + (on ? '0 1px 2px rgba(24,24,27,0.08)' : 'none'),
+        pick: function () {
+          var first = people.filter(function (p) { return inTab(p, k); })[0];
+          self.setState({ tab: k, sel: first ? first.id : null, toast: null });
+        }
+      };
+    });
+    var cur = null;
+    for (var i = 0; i < people.length; i++) { if (people[i].id === this.state.sel && inTab(people[i], this.state.tab)) cur = people[i]; }
+    var sel = null;
+    if (cur) {
+      var s = st[cur.id];
+      sel = {
+        name: cur.name, ini: cur.ini, tint: cur.tint, ink: cur.ink, email: cur.email, when: cur.when, job: cur.job, positions: cur.positions,
+        statusLabel: labels[s], statusBg: colors[s][0], statusInk: colors[s][1],
+        criteria: cur.criteria.map(function (c) { return { label: c.label, detail: c.detail, ok: c.ok, bad: !c.ok, bg: c.ok ? '#DCFCE7' : '#FEF3C7' }; })
+      };
+    }
+    function decide(to, msg, dot) {
+      if (!cur) return;
+      var next = Object.assign({}, st); next[cur.id] = to;
+      var rest = people.filter(function (p) { return p.id !== cur.id && (self.state.tab === 'pending' ? (next[p.id] === 'pending' || next[p.id] === 'info') : next[p.id] === self.state.tab); });
+      self.setState({ status: next, sel: to === 'info' ? cur.id : (rest[0] ? rest[0].id : null), toast: cur.name + msg, toastDot: dot });
+    }
+    var pendingCount = people.filter(function (p) { return st[p.id] === 'pending' || st[p.id] === 'info'; }).length;
+    return {
+      tabs: tabs, visible: visible, empty: visible.length === 0, hasSel: !!sel, sel: sel || { positions: [], criteria: [] },
+      pendingCount: pendingCount,
+      hasToast: !!this.state.toast, toast: this.state.toast, toastDot: this.state.toastDot,
+      approve: function () { decide('approved', ' je odobren/a. Email dobrodošlice je poslat.', '#22C55E'); },
+      reject: function () { decide('rejected', ': prijava odbijena, obrazloženje poslato.', '#F87171'); },
+      askInfo: function () { decide('info', ': zatražena dopuna podataka.', '#60A5FA'); }
+    };
+  }
+}
+</script>
+</body>
+</html>

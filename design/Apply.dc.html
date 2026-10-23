@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="sr-Latn">
+<head>
+<meta charset="utf-8">
+<title>Prijava za AIESEC Alumni</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=Geist+Mono:wght@400;500&amp;display=swap">
+<style>
+body{margin:0;background:#F6F7F9;font-family:'Geist',ui-sans-serif,system-ui,sans-serif;color:#18181B;-webkit-font-smoothing:antialiased}
+a{color:#0369D1}a:hover{color:#02509F}
+.btn{cursor:pointer;transition:transform .2s cubic-bezier(.16,1,.3,1),background .2s}
+.btn:active{transform:translateY(1px) scale(.98)}
+.fld{box-sizing:border-box;width:100%;min-height:46px;padding:0 14px;border-radius:12px;border:1px solid #D4D4D8;background:#FFFFFF;font:inherit;font-size:15px;color:#18181B;transition:border-color .2s,box-shadow .2s}
+.fld:focus{outline:none;border-color:#0369D1;box-shadow:0 0 0 4px rgba(3,105,209,0.14)}
+.fld-err{border-color:#B91C1C}
+.step-in{animation:stepin .5s cubic-bezier(.16,1,.3,1) both}
+@keyframes stepin{from{opacity:0;transform:translateX(14px)}to{opacity:1;transform:none}}
+.float{animation:float 6s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@media (prefers-reduced-motion: reduce){.step-in,.float{animation:none}}
+</style>
+</helmet>
+<div style="min-height: 100vh; display: flex; flex-wrap: wrap; background: #F6F7F9">
+
+  <section style="flex: 1 1 420px; min-width: 0; box-sizing: border-box; padding: clamp(28px, 5vw, 64px); background: #101A2B; color: #F4F6FA; display: flex; flex-direction: column; gap: 40px; position: relative; overflow: hidden">
+    <svg class="float" width="420" height="420" viewBox="0 0 420 420" fill="none" aria-hidden="true" style="position: absolute; right: -140px; top: -120px; opacity: 0.5"><circle cx="210" cy="210" r="200" stroke="#2A5BA0" stroke-width="1"/><circle cx="210" cy="210" r="150" stroke="#2A5BA0" stroke-width="1"/><ellipse cx="210" cy="210" rx="80" ry="200" stroke="#2A5BA0" stroke-width="1"/><path d="M10 210h400M40 110h340M40 310h340" stroke="#2A5BA0" stroke-width="1"/></svg>
+    <div style="display: flex; align-items: center; gap: 10px; position: relative">
+      <div style="width: 32px; height: 32px; border-radius: 10px; background: #0369D1; display: grid; place-items: center"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M4 12h16M12 4c2.3 2.2 3.4 4.9 3.4 8s-1.1 5.8-3.4 8c-2.3-2.2-3.4-4.9-3.4-8S9.7 6.2 12 4z"/></svg></div>
+      <span style="font-weight: 700; font-size: 15px">AIESEC Alumni · Srbija</span>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 16px; max-width: 46ch; position: relative">
+      <h1 style="margin: 0; font-size: clamp(30px, 3.4vw, 44px); line-height: 1.05; letter-spacing: -0.035em; font-weight: 600">Bio si deo AIESEC-a. Ostani deo mreže.</h1>
+      <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #B9C3D3">Prijavi se u alumni bazu svog lokalnog komiteta. Prijavu pregleda i odobrava tvoj LC; posle toga dobijaš pristup imeniku, događajima i mentorskom programu.</p>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 14px; position: relative">
+      <span style="font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #8FA0B8">Šta dobijaš u mreži</span>
+      <div style="display: flex; gap: 12px; align-items: flex-start"><span style="flex: none; width: 24px; height: 24px; border-radius: 50%; background: #1C2C45; display: grid; place-items: center"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#7DB5F5" stroke-width="2.4" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></span><span style="font-size: 15px; line-height: 1.5; color: #DCE3EE">Imenik alumnija iz svih osam LC-ova u Srbiji</span></div>
+      <div style="display: flex; gap: 12px; align-items: flex-start"><span style="flex: none; width: 24px; height: 24px; border-radius: 50%; background: #1C2C45; display: grid; place-items: center"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#7DB5F5" stroke-width="2.4" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></span><span style="font-size: 15px; line-height: 1.5; color: #DCE3EE">Grupe po interesovanjima, u koje ulaziš i iz kojih izlaziš kad hoćeš</span></div>
+      <div style="display: flex; gap: 12px; align-items: flex-start"><span style="flex: none; width: 24px; height: 24px; border-radius: 50%; background: #1C2C45; display: grid; place-items: center"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#7DB5F5" stroke-width="2.4" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></span><span style="font-size: 15px; line-height: 1.5; color: #DCE3EE">Pozivi na Homecoming, konferencije i mentorski program</span></div>
+      <span style="font-size: 13px; color: #8FA0B8">Tvoj kontakt drugi LC-ovi dobijaju samo uz odobrenje tvog LCP-a.</span>
+    </div>
+    <div style="margin-top: auto; display: flex; flex-direction: column; gap: 10px; position: relative; padding-top: 24px; border-top: 1px solid #22324B">
+      <span style="font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #8FA0B8">Šta sledi</span>
+      <div style="display: flex; flex-wrap: wrap; gap: 8px 20px; font-size: 14px; color: #DCE3EE"><span><span style="font-family: 'Geist Mono', monospace; color: #7DB5F5">01</span> Pošalješ prijavu</span><span><span style="font-family: 'Geist Mono', monospace; color: #7DB5F5">02</span> LCP tvog LC-a pregleda prijavu</span><span><span style="font-family: 'Geist Mono', monospace; color: #7DB5F5">03</span> Stiže email dobrodošlice</span></div>
+    </div>
+  </section>
+
+  <section style="flex: 1.25 1 520px; min-width: 0; box-sizing: border-box; padding: clamp(24px, 5vw, 64px); display: flex; justify-content: center">
+    <div style="width: 100%; max-width: 620px; display: flex; flex-direction: column; gap: 28px">
+
+      <sc-if value="{{notDone}}" hint-placeholder-val="{{true}}">
+      <ol aria-label="Koraci prijave" style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px">
+        <sc-for list="{{steps}}" as="s" hint-placeholder-count="4">
+          <li style="display: flex; flex-direction: column; gap: 8px">
+            <span style="height: 4px; border-radius: 999px; background: {{s.bar}}; transition: background .4s"></span>
+            <span style="font-size: 13px; font-weight: {{s.weight}}; color: {{s.color}}"><span style="font-family: 'Geist Mono', monospace">{{s.n}}</span> {{s.label}}</span>
+          </li>
+        </sc-for>
+      </ol>
+      </sc-if>
+
+      <sc-if value="{{s1}}" hint-placeholder-val="{{true}}">
+      <form class="step-in" style="display: flex; flex-direction: column; gap: 20px">
+        <div style="display: flex; flex-direction: column; gap: 6px"><h2 style="margin: 0; font-size: 24px; letter-spacing: -0.02em; font-weight: 600">Lični podaci</h2><p style="margin: 0; font-size: 15px; color: #52525B">Ovi podaci su vidljivi samo odobrenim alumnijima i administratorima.</p></div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)); gap: 16px">
+          <div style="display: flex; flex-direction: column; gap: 8px"><label for="ime" style="font-size: 14px; font-weight: 500">Ime</label><input id="ime" class="fld" value="Teodora"></div>
+          <div style="display: flex; flex-direction: column; gap: 8px"><label for="prezime" style="font-size: 14px; font-weight: 500">Prezime</label><input id="prezime" class="fld" value="Vasić"></div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 8px"><label for="email" style="font-size: 14px; font-weight: 500">Email</label><input id="email" type="email" class="fld fld-err" value="teodora.vasic@" aria-describedby="email-err"><span id="email-err" style="font-size: 13px; color: #B91C1C">Unesi kompletnu email adresu, npr. ime@domen.rs</span></div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)); gap: 16px">
+          <div style="display: flex; flex-direction: column; gap: 8px"><label for="grad" style="font-size: 14px; font-weight: 500">Grad u kom živiš</label><input id="grad" class="fld" value="Novi Sad"></div>
+          <div style="display: flex; flex-direction: column; gap: 8px"><label for="tel" style="font-size: 14px; font-weight: 500">Telefon <span style="color: #63636B; font-weight: 400">(opciono)</span></label><input id="tel" class="fld" placeholder="+381 6x xxx xxxx"></div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 8px"><label for="li" style="font-size: 14px; font-weight: 500">LinkedIn profil <span style="color: #63636B; font-weight: 400">(opciono)</span></label><input id="li" class="fld" placeholder="linkedin.com/in/…"><span style="font-size: 13px; color: #63636B">Pomaže LC-u da brže potvrdi tvoje iskustvo.</span></div>
+      </form>
+      </sc-if>
+
+      <sc-if value="{{s2}}" hint-placeholder-val="{{false}}">
+      <form class="step-in" style="display: flex; flex-direction: column; gap: 20px">
+        <div style="display: flex; flex-direction: column; gap: 6px"><h2 style="margin: 0; font-size: 24px; letter-spacing: -0.02em; font-weight: 600">Tvoj put kroz AIESEC</h2><p style="margin: 0; font-size: 15px; color: #52525B">Na osnovu ovoga tvoj LC pregleda prijavu.</p></div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)); gap: 16px">
+          <div style="display: flex; flex-direction: column; gap: 8px"><label for="mc" style="font-size: 14px; font-weight: 500">Nacionalni komitet (MC)</label><select id="mc" class="fld"><option>AIESEC in Serbia</option><option>Drugi MC…</option></select></div>
+          <div style="display: flex; flex-direction: column; gap: 8px"><label for="lc" style="font-size: 14px; font-weight: 500">Lokalni komitet (LC)</label><select id="lc" class="fld"><option>LC Novi Sad (LC NS)</option><option>LC Metropolitan (LC MET)</option><option>LC FON (LC FON)</option><option>LC EF (LC EF)</option><option>LC Singidunum (LC SINGI)</option><option>LC Kragujevac (LC KG)</option><option>LC Niš (LC NIŠ)</option><option>LC Subotica (LC SUB)</option></select><span style="font-size: 13px; color: #63636B">Ovaj LC odobrava tvoju prijavu.</span></div>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(160px, 100%), 1fr)); gap: 16px">
+          <div style="display: flex; flex-direction: column; gap: 8px"><label for="od" style="font-size: 14px; font-weight: 500">Pridružio/la se</label><input id="od" class="fld" value="Oktobar 2016"></div>
+          <div style="display: flex; flex-direction: column; gap: 8px"><label for="do" style="font-size: 14px; font-weight: 500">Završio/la članstvo</label><input id="do" class="fld" value="Jul 2020"></div>
+        </div>
+        <fieldset style="margin: 0; padding: 0; border: 0; display: flex; flex-direction: column; gap: 10px">
+          <legend style="font-size: 14px; font-weight: 500; padding: 0; margin-bottom: 10px">Pozicije u AIESEC-u</legend>
+          <sc-for list="{{positions}}" as="p" hint-placeholder-count="3">
+            <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px; padding: 12px 14px; border-radius: 12px; border: 1px solid #E4E4E7; background: #FFFFFF">
+              <span style="font-family: 'Geist Mono', monospace; font-size: 13px; color: #63636B; min-width: 92px">{{p.term}}</span>
+              <span style="flex: 1 1 160px; font-size: 15px; font-weight: 500">{{p.role}}</span>
+              <span style="font-size: 13px; color: #52525B">{{p.scope}}</span>
+              <button class="btn" type="button" aria-label="Ukloni poziciju" style="width: 36px; height: 36px; border-radius: 10px; border: 0; background: transparent; display: grid; place-items: center; color: #63636B"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+            </div>
+          </sc-for>
+          <button class="btn" type="button" style="align-self: flex-start; display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 14px; border-radius: 12px; border: 1px dashed #A1A1AA; background: transparent; font: inherit; font-size: 14px; font-weight: 500; color: #3F3F46"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>Dodaj poziciju</button>
+        </fieldset>
+        <label style="display: flex; gap: 12px; align-items: center; min-height: 44px; font-size: 15px"><input type="checkbox" checked style="width: 18px; height: 18px; accent-color: #0369D1">Išao/la sam na razmenu (Global Volunteer, Talent ili Teacher)</label>
+      </form>
+      </sc-if>
+
+      <sc-if value="{{s3}}" hint-placeholder-val="{{false}}">
+      <form class="step-in" style="display: flex; flex-direction: column; gap: 20px">
+        <div style="display: flex; flex-direction: column; gap: 6px"><h2 style="margin: 0; font-size: 24px; letter-spacing: -0.02em; font-weight: 600">Karijera i interesovanja</h2><p style="margin: 0; font-size: 15px; color: #52525B">Pomaže drugim alumnijima i članovima da te pronađu.</p></div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)); gap: 16px">
+          <div style="display: flex; flex-direction: column; gap: 8px"><label for="firma" style="font-size: 14px; font-weight: 500">Trenutna kompanija</label><input id="firma" class="fld" value="Nordeus"></div>
+          <div style="display: flex; flex-direction: column; gap: 8px"><label for="poz" style="font-size: 14px; font-weight: 500">Pozicija</label><input id="poz" class="fld" value="Senior Product Manager"></div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 8px"><label for="ind" style="font-size: 14px; font-weight: 500">Industrija</label><select id="ind" class="fld"><option>IT i softver</option><option>Konsalting</option><option>Finansije</option><option>FMCG</option><option>NVO i javni sektor</option><option>Preduzetništvo</option></select></div>
+        <div style="display: flex; flex-direction: column; gap: 10px">
+          <span style="font-size: 14px; font-weight: 500">Prethodna iskustva</span>
+          <div style="display: flex; flex-wrap: wrap; gap: 12px; align-items: center; padding: 12px 14px; border-radius: 12px; border: 1px solid #E4E4E7; background: #FFFFFF"><span style="font-family: 'Geist Mono', monospace; font-size: 13px; color: #63636B; min-width: 92px">2020–2023</span><span style="flex: 1 1 160px; font-size: 15px; font-weight: 500">Product Owner · HTEC Group</span></div>
+          <button class="btn" type="button" style="align-self: flex-start; display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 14px; border-radius: 12px; border: 1px dashed #A1A1AA; background: transparent; font: inherit; font-size: 14px; font-weight: 500; color: #3F3F46"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>Dodaj prethodni posao</button>
+        </div>
+        <fieldset style="margin: 0; padding: 0; border: 0; display: flex; flex-direction: column; gap: 4px">
+          <legend style="font-size: 14px; font-weight: 500; padding: 0; margin-bottom: 8px">Kako želiš da doprineseš</legend>
+          <label style="display: flex; gap: 12px; align-items: center; min-height: 44px; font-size: 15px"><input type="checkbox" checked style="width: 18px; height: 18px; accent-color: #0369D1">Mentorstvo trenutnim članovima</label>
+          <label style="display: flex; gap: 12px; align-items: center; min-height: 44px; font-size: 15px"><input type="checkbox" style="width: 18px; height: 18px; accent-color: #0369D1">Predavanja i treninzi na konferencijama</label>
+          <label style="display: flex; gap: 12px; align-items: center; min-height: 44px; font-size: 15px"><input type="checkbox" checked style="width: 18px; height: 18px; accent-color: #0369D1">Oglasi za posao i praksu iz moje firme</label>
+          <label style="display: flex; gap: 12px; align-items: center; min-height: 44px; font-size: 15px"><input type="checkbox" style="width: 18px; height: 18px; accent-color: #0369D1">Partnerstva i podrška LC-u</label>
+        </fieldset>
+      </form>
+      </sc-if>
+
+      <sc-if value="{{s4}}" hint-placeholder-val="{{false}}">
+      <form class="step-in" style="display: flex; flex-direction: column; gap: 20px">
+        <div style="display: flex; flex-direction: column; gap: 6px"><h2 style="margin: 0; font-size: 24px; letter-spacing: -0.02em; font-weight: 600">Pregled i saglasnost</h2><p style="margin: 0; font-size: 15px; color: #52525B">Proveri podatke pre slanja. Možeš ih menjati i kasnije, sa svog profila.</p></div>
+        <dl style="margin: 0; border-radius: 14px; border: 1px solid #E4E4E7; background: #FFFFFF; display: flex; flex-direction: column">
+          <div style="display: flex; flex-wrap: wrap; gap: 4px 16px; padding: 14px 16px; border-bottom: 1px solid #F1F2F4"><dt style="flex: 0 0 160px; font-size: 14px; color: #63636B">Ime i prezime</dt><dd style="margin: 0; font-size: 15px; font-weight: 500">Teodora Vasić</dd></div>
+          <div style="display: flex; flex-wrap: wrap; gap: 4px 16px; padding: 14px 16px; border-bottom: 1px solid #F1F2F4"><dt style="flex: 0 0 160px; font-size: 14px; color: #63636B">LC · MC</dt><dd style="margin: 0; font-size: 15px; font-weight: 500">LC Novi Sad · AIESEC in Serbia</dd></div>
+          <div style="display: flex; flex-wrap: wrap; gap: 4px 16px; padding: 14px 16px; border-bottom: 1px solid #F1F2F4"><dt style="flex: 0 0 160px; font-size: 14px; color: #63636B">Članstvo</dt><dd style="margin: 0; font-size: 15px; font-weight: 500">Okt 2016 – Jul 2020 · 3 pozicije</dd></div>
+          <div style="display: flex; flex-wrap: wrap; gap: 4px 16px; padding: 14px 16px"><dt style="flex: 0 0 160px; font-size: 14px; color: #63636B">Trenutno</dt><dd style="margin: 0; font-size: 15px; font-weight: 500">Senior Product Manager · Nordeus</dd></div>
+        </dl>
+        <div style="display: flex; flex-direction: column; gap: 4px">
+          <label style="display: flex; gap: 12px; align-items: flex-start; padding: 10px 0; font-size: 15px; line-height: 1.5"><input type="checkbox" checked style="flex: none; margin-top: 3px; width: 18px; height: 18px; accent-color: #0369D1">Saglasan/na sam da AIESEC in Serbia čuva i obrađuje moje podatke u svrhu alumni mreže, u skladu sa <a href="#politika">politikom privatnosti</a>.</label>
+          <label style="display: flex; gap: 12px; align-items: flex-start; padding: 10px 0; font-size: 15px; line-height: 1.5"><input type="checkbox" checked style="flex: none; margin-top: 3px; width: 18px; height: 18px; accent-color: #0369D1">Želim da primam newslettere svog LC-a i MC-a. Odjava je moguća u svakom emailu.</label>
+          <label style="display: flex; gap: 12px; align-items: flex-start; padding: 10px 0; font-size: 15px; line-height: 1.5"><input type="checkbox" style="flex: none; margin-top: 3px; width: 18px; height: 18px; accent-color: #0369D1">Prikaži moj profil i trenutnim članovima (ne samo alumnijima).</label>
+        </div>
+      </form>
+      </sc-if>
+
+      <sc-if value="{{done}}" hint-placeholder-val="{{false}}">
+      <div class="step-in" style="display: flex; flex-direction: column; gap: 18px; padding: 36px; border-radius: 24px; background: #FFFFFF; border: 1px solid #EBECEF; box-shadow: 0 24px 48px -28px rgba(16,26,43,0.25)">
+        <div style="width: 52px; height: 52px; border-radius: 16px; background: #DCFCE7; display: grid; place-items: center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#166534" stroke-width="2" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></div>
+        <h2 style="margin: 0; font-size: 26px; letter-spacing: -0.02em; font-weight: 600">Prijava je poslata</h2>
+        <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #52525B; max-width: 52ch">LC Novi Sad je dobio tvoju prijavu i pregledaće je. Kada je odobri, na teodora.vasic@… stiže email sa linkom za prijavu na platformu.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 10px; padding-top: 6px">
+          <button class="btn" type="button" onClick="{{restart}}" style="min-height: 44px; padding: 0 16px; border-radius: 12px; border: 1px solid #DCDDE2; background: #FFFFFF; font: inherit; font-size: 14px; font-weight: 500; color: #18181B">Nova prijava</button>
+        </div>
+      </div>
+      </sc-if>
+
+      <sc-if value="{{notDone}}" hint-placeholder-val="{{true}}">
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; padding-top: 8px; border-top: 1px solid #E4E4E7">
+        <button class="btn" type="button" onClick="{{back}}" disabled="{{isFirst}}" style="min-height: 46px; padding: 0 18px; border-radius: 12px; border: 1px solid #DCDDE2; background: #FFFFFF; font: inherit; font-size: 15px; font-weight: 500; color: #18181B; opacity: {{backOpacity}}">Nazad</button>
+        <button class="btn" type="button" onClick="{{next}}" style="display: inline-flex; align-items: center; gap: 8px; min-height: 46px; padding: 0 22px; border-radius: 12px; border: 0; background: #0369D1; font: inherit; font-size: 15px; font-weight: 600; color: #FFFFFF; box-shadow: inset 0 1px 0 rgba(255,255,255,0.18), 0 8px 20px -10px rgba(3,105,209,0.6)">{{nextLabel}}<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+      </div>
+      </sc-if>
+
+    </div>
+  </section>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1060}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { step: 1 }; }
+  renderVals() {
+    var self = this;
+    var step = this.state.step;
+    var labels = ['Lični podaci', 'AIESEC put', 'Karijera', 'Slanje'];
+    var steps = labels.map(function (l, i) {
+      var n = i + 1;
+      return {
+        n: '0' + n, label: l,
+        bar: n <= step ? '#0369D1' : '#E4E4E7',
+        color: n === step ? '#18181B' : '#63636B',
+        weight: n === step ? '600' : '500'
+      };
+    });
+    return {
+      steps: steps,
+      s1: step === 1, s2: step === 2, s3: step === 3, s4: step === 4,
+      done: step === 5, notDone: step < 5,
+      isFirst: step === 1, backOpacity: step === 1 ? '0.5' : '1',
+      nextLabel: step === 4 ? 'Pošalji prijavu' : 'Dalje',
+      positions: [
+        { term: '2016–2017', role: 'Član, oGV tim', scope: 'LC Novi Sad' },
+        { term: '2017–2018', role: 'Team Leader, oGV', scope: 'LC Novi Sad' },
+        { term: '2018–2020', role: 'LCVP Outgoing Exchange', scope: 'LC Novi Sad' }
+      ],
+      next: function () { self.setState({ step: Math.min(5, step + 1) }); },
+      back: function () { self.setState({ step: Math.max(1, step - 1) }); },
+      restart: function () { self.setState({ step: 1 }); }
+    };
+  }
+}
+</script>
+</body>
+</html>
